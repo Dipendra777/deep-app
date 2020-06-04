@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)file:///C:/Users/Dipendra/2019%20april/sample.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<title>First Html</title>
+	
+</head>  <body style="width: 300px;
+  border: 25px solid green;
+  padding: 25px;
+  margin: 25px; background-color: aqua">
+ 
+  <h1 style="color: orange">Create Account 
+</h1>
+<!--<img src="file:///C:/Users/Dipendra/2019%20april/fish.jpg" height="150" width="300"> -->
+
+
+
+    <hr>
+
+	<div>
+	<label>  First Name </label>
+	<input type="text" name=" firstName" placeholder="Enter First Name" required>
+</div>
+<br>
+<div>
+   <label>  Last  Name </label>
+	<input type="text" placeholder="Enter Last Name" name="lastName ">
+        
+    
+    
+	</div>
+
+    <br>
+		<div class="form-group">
+			<label for ="email">Email</label>
+			  <input type="text" class="form-control" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" id="email"name="email" ngModel #emailref="ngModel">
+			  <div *ngIf="emailref.errors &&(emailref.touched || emailref.dirty)" class ="alert alert-danger">
+			   <div [hidden]="!emailref.errors?.pattern">
+				 Invalid pattern
+			   </div> 
+			  </div> 
+		</div>
+<br>
+
+<div class="form-group">
+	<label for ="phoneNumber">phoneNumber</label>
+	  <input type="text" class="form-control" required pattern="^[0-9\-\+]{9,15}$" id="phoneNumber"name="email" ngModel #phoneNumberref="ngModel">
+	  <div *ngIf="phoneNumberref.errors &&(phoneNumberref.touched || phoneNumberref.dirty)" class ="alert alert-danger">
+	   <div [hidden]="!phoneNumberref.errors?.pattern">
+		 Invalid pattern
+	   </div> 
+	  </div> 
+</div>
+
+<br>
+<div>
+	<label>  Password </label>
+	 <input type="text" placeholder="Enter New Password" name="lastName ">
+		 </div>
+		 <br>
+<div>
+	<label> Massage  </label>
+	<textarea name=""></textarea>
+
+</div>
+<br>
+<label> Gender </label>
+<select name="">
+	<option value="">Male </option>
+	<option value="">Female </option>
+	<option value="">Other</option>
+</select>
+<br>
+<br>
+<div>
+
+<label>Age: </label>
+    <input type="number" name="age" value="30">
+</div>
+    <br>
+<div>
+
+<label>.Birthday: </label>
+    <input type="date" name="birthday" value="">
+</div>
+<input type="submit" [disabled]="isDisabled" name="submit"  value="Submit">
+ <br>
+    <div>
+    
+	</div>
+	<div>
+		<br>
+	<button (click)= 'onClick()' >
+		Click me 
+	</button>	
+	</div>
+	
+
+	<div>
+		<input type="text" [(ngModel)]= "inputText"	>
+		{{inputText}}
+		  <h1>
+			  Weclome {{inputText}}
+			  {{date}}
+		  </h1>
+		  </div>
+	
+
+
+
+</body></html>
+
