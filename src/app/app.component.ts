@@ -10,12 +10,13 @@ export class AppComponent {
   
   title = 'my-dip-app';
   get: any;
-  constructor(private svs:DipService, private http: HttpClient) { 
+  /*constructor(private svs:DipService, private http: HttpClient) { 
     this.svs.printToConsole("Go to service");
-  }
+  }*/
   ngOnInit(){
-   let obs= this.get.http('');
+   /*let obs= this.get.http('');
 obs.subscribe((response)=>console.log(response));
+*/
   }
 
 }
