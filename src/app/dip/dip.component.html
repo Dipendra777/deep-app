@@ -71,15 +71,29 @@
 </select>
 <br>
 <br>
+
+<div class="form-group">
+	
+	StateName
+		<select >
+			<!-- <option *ngFor ='let st for state' [value] ='st.Id'> -->
+			<option *ngFor ='let st of state' [value] ='st.Id'>
+				{{st.Name}}
+
+			</option>
+		</select>
+	
+</div>
+<br>
 <div>
 
 <label>Age: </label>
     <input type="number" name="age" value="30">
 </div>
-    <br>
+	<br>	
 <div>
 
-<label>.Birthday: </label>
+<label>Birthday: </label>
     <input type="date" name="birthday" value="">
 </div>
 <input type="submit" [disabled]="isDisabled" name="submit"  value="Submit">

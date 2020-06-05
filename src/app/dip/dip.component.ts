@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { State } from './state';
 
 @Component({
   selector: 'app-dip',
@@ -7,6 +8,12 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./dip.component.css']
 })
 export class DipComponent implements OnInit {
+  
+  state:State[];
+ 
+  
+  
+  //satSelected:Number;
   onClick():void{
     console.log('button is click')
 
@@ -21,7 +28,13 @@ export class DipComponent implements OnInit {
   date:Date=new Date();
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+   this.state=[
+      {Id:1,Name:'MO'},
+      {Id:2,Name:'TX'},
+    ];
+//this.stSelected=1;
+
     
     }
   }
