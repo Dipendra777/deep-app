@@ -21,7 +21,7 @@ export class DipComponent implements OnInit {
  keyPress():void{}
   
   inputText:string="Intial ";
-   isDisabled:boolean =true;
+   isDisabled:boolean =false;
   title = 'my-dip';
   
   
@@ -31,7 +31,7 @@ export class DipComponent implements OnInit {
   ngOnInit() {
    this.state=[
       {Id:1,Name:'MO'},
-      {Id:2,Name:'TX'},
+      {Id:2,Name:'TX'}
     ];
 //this.stSelected=1;
 

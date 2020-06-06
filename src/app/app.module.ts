@@ -7,12 +7,14 @@ import { DipComponent } from './dip/dip.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DipService } from './dip.service';
+import { HideShowComponent } from './hide-show/hide-show.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DipComponent
+    DipComponent,
+    HideShowComponent
   ],
   imports: [
     BrowserModule,
